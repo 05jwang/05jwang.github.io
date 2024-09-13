@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { Text, Icon, Card } from '@blueprintjs/core';
 import { useRecoilState } from 'recoil';
 import SectionWrapper from './SectionWrapper';
-import tev_homepage from '../../assets/tev_homepage.png';
+import tev_homepage from '../../assets/TEV_Homepage.png';
 import wordle from '../../assets/wordle.png';
 import vip from '../../assets/vip.jpg';
 import tarigma from '../../assets/tarigma_corp_logo.jpeg';
