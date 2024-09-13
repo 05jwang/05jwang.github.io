@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, HashRouter } from 'react-router-dom';
 import { useRecoilState } from 'recoil';
 import { themeState } from './recoil/atoms/themeState';
 import NavBar from './components/NavBar';
@@ -30,19 +30,21 @@ const App: React.FC = () => {
     <div className={darkTheme ? Classes.DARK : ''} style={appStyles}>
       <NavBar />
       <div style={{ flex: 1 }}>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/resume" element={<ResumePage />} />
-          <Route path="/projects" element={<ProjectsPage />} />
-          <Route path="/projects/tev" element={<TevProjectPage />} />
-          <Route path="/projects/triage" element={<TriageProjectPage />} />
-          <Route
-            path="/projects/memeintent"
-            element={<MemeIntentProjectPage />}
-          />
-          <Route path="/projects/vip" element={<VIPProjectPage />} />
-          <Route path="/projects/wordle" element={<WordleProjectPage />} />
-        </Routes>
+        <HashRouter>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/resume" element={<ResumePage />} />
+            <Route path="/projects" element={<ProjectsPage />} />
+            <Route path="/projects/tev" element={<TevProjectPage />} />
+            <Route path="/projects/triage" element={<TriageProjectPage />} />
+            <Route
+              path="/projects/memeintent"
+              element={<MemeIntentProjectPage />}
+            />
+            <Route path="/projects/vip" element={<VIPProjectPage />} />
+            <Route path="/projects/wordle" element={<WordleProjectPage />} />
+          </Routes>
+        </HashRouter>
       </div>
       <Footer />
     </div>

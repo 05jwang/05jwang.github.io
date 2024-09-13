@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from 'react';
 import { Text, Icon, Card } from '@blueprintjs/core';
 import { useRecoilState } from 'recoil';
 import { themeState } from '../recoil/atoms/themeState';
-
+import { Element } from 'react-scroll';
 import { AboutSectionContent } from '../components/sections/AboutSectionContent';
 import { ExperienceSectionContent } from '../components/sections/ExperienceSectionContent';
 import { ProjectsSectionContent } from '../components/sections/ProjectsSectionContent';
@@ -18,39 +18,6 @@ const HomePage: React.FC = () => {
   const contactRef = useRef<HTMLDivElement>(null);
 
   const [darkTheme] = useRecoilState(themeState);
-
-  useEffect(() => {
-    const handleHashChange = () => {
-      const section = window.location.hash.substring(1);
-      switch (section) {
-        case 'About':
-          aboutRef.current?.scrollIntoView({ behavior: 'smooth' });
-          break;
-        case 'Experience':
-          experienceRef.current?.scrollIntoView({ behavior: 'smooth' });
-          break;
-        case 'Projects':
-          projectsRef.current?.scrollIntoView({ behavior: 'smooth' });
-          break;
-        case 'Skills':
-          skillsRef.current?.scrollIntoView({ behavior: 'smooth' });
-          break;
-        case 'Contact':
-          contactRef.current?.scrollIntoView({ behavior: 'smooth' });
-          break;
-        default:
-          break;
-      }
-    };
-
-    handleHashChange();
-    window.addEventListener('hashchange', handleHashChange);
-
-    return () => {
-      window.removeEventListener('hashchange', handleHashChange);
-    };
-  }, []);
-
   return (
     <div
       className="homepage"
@@ -58,11 +25,28 @@ const HomePage: React.FC = () => {
         marginTop: '50px',
       }}
     >
-      <AboutSectionContent sectionRef={aboutRef} theme={darkTheme} />
-      <ExperienceSectionContent sectionRef={experienceRef} theme={darkTheme} />
-      <ProjectsSectionContent sectionRef={projectsRef} theme={darkTheme} />
-      <SkillsSectionContent sectionRef={skillsRef} theme={darkTheme} />
-      <ContactSectionContent sectionRef={contactRef} theme={darkTheme} />
+      <Element name="About">
+        <AboutSectionContent sectionRef={aboutRef} theme={darkTheme} />
+      </Element>
+
+      <Element name="Experience">
+        <ExperienceSectionContent
+          sectionRef={experienceRef}
+          theme={darkTheme}
+        />
+      </Element>
+
+      <Element name="Projects">
+        <ProjectsSectionContent sectionRef={projectsRef} theme={darkTheme} />
+      </Element>
+
+      <Element name="Skills">
+        <SkillsSectionContent sectionRef={skillsRef} theme={darkTheme} />
+      </Element>
+
+      <Element name="Contact">
+        <ContactSectionContent sectionRef={contactRef} theme={darkTheme} />
+      </Element>
     </div>
   );
 };

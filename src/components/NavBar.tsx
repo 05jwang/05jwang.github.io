@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navbar, Alignment, Button, Switch } from '@blueprintjs/core';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-scroll';
 import { useRecoilState } from 'recoil';
 import { themeState } from '../recoil/atoms/themeState';
 
@@ -32,21 +32,21 @@ const NavBar: React.FC = () => {
           </a>
         </Navbar.Heading>
         <Navbar.Divider />
-        <a href="/#About">
+        <Link to="About">
           <Button minimal>About</Button>
-        </a>
-        <a href="/#Experience">
+        </Link>
+        <Link to="Experience">
           <Button minimal>Experience</Button>
-        </a>
-        <a href="/#Projects">
+        </Link>
+        <Link to="Projects">
           <Button minimal>Projects</Button>
-        </a>
-        <a href="/#Skills">
+        </Link>
+        <Link to="Skills">
           <Button minimal>Skills</Button>
-        </a>
-        <a href="/#Contact">
+        </Link>
+        <Link to="Contact">
           <Button minimal>Contact</Button>
-        </a>
+        </Link>
       </Navbar.Group>
       <Navbar.Group align={Alignment.RIGHT}>
         <Button

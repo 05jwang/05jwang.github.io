@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { Text, Icon, Card, Tabs, Tab, Button } from '@blueprintjs/core';
+import { Link } from 'react-scroll';
 import SectionWrapper from './SectionWrapper';
 import headshot from '../../assets/headshot.jpg';
 interface AboutSectionContentProps {
@@ -41,18 +42,19 @@ export const AboutSectionContent: React.FC<AboutSectionContentProps> = (
               icon="document"
               intent="primary"
               style={{ marginTop: '20px' }}
-              onClick={() => (window.location.href = '/resume')}
+              onClick={() => (window.location.href = '#/resume')}
             >
               Resume
             </Button>
-            <Button
-              icon="envelope"
-              intent="success"
-              style={{ marginTop: '20px', marginLeft: '50px' }}
-              onClick={() => (window.location.href = '#Contact')}
-            >
-              Contact
-            </Button>
+            <Link to="Contact">
+              <Button
+                icon="envelope"
+                intent="success"
+                style={{ marginTop: '20px', marginLeft: '50px' }}
+              >
+                Contact
+              </Button>
+            </Link>
           </div>
         </div>
         <img

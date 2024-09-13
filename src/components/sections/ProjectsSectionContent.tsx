@@ -37,7 +37,7 @@ export const ProjectsSectionContent: React.FC<ProjectsSectionContentProps> = (
           interactive={true}
           elevation={2}
           style={cardStyle}
-          onClick={() => (window.location.href = '/projects/tev')}
+          onClick={() => (window.location.href = '#/projects/tev')}
         >
           <h3>Tarigma-Event-Viewer</h3>
           <i>December 2023 – August 2024</i>
@@ -57,7 +57,7 @@ export const ProjectsSectionContent: React.FC<ProjectsSectionContentProps> = (
           interactive={true}
           elevation={2}
           style={cardStyle}
-          onClick={() => (window.location.href = '/projects/memeintent')}
+          onClick={() => (window.location.href = '#/projects/memeintent')}
         >
           <h3>MemeIntent Paper</h3>
           <i>Accepted to SIGDIAL 2024, to be published Sep. 18th</i>
@@ -81,7 +81,7 @@ export const ProjectsSectionContent: React.FC<ProjectsSectionContentProps> = (
           interactive={true}
           elevation={2}
           style={cardStyle}
-          onClick={() => (window.location.href = '/projects/vip')}
+          onClick={() => (window.location.href = '#/projects/vip')}
         >
           <h3>Advancing Material Discovery with AI</h3>
           <i>June 2024 – Present</i>
@@ -108,7 +108,7 @@ export const ProjectsSectionContent: React.FC<ProjectsSectionContentProps> = (
           interactive={true}
           elevation={2}
           style={cardStyle}
-          onClick={() => (window.location.href = '/projects/triage')}
+          onClick={() => (window.location.href = '#/projects/triage')}
         >
           <h3>Triage Cause Predictor Proof-of-Concept</h3>
           <i>June 2023 – January 2024</i>
@@ -136,7 +136,7 @@ export const ProjectsSectionContent: React.FC<ProjectsSectionContentProps> = (
           interactive={true}
           elevation={2}
           style={cardStyle}
-          onClick={() => (window.location.href = '/projects/wordle')}
+          onClick={() => (window.location.href = '#/projects/wordle')}
         >
           <h3>wordle-asm</h3>
           <i>March – May 2024</i>
