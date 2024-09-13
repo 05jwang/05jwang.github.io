@@ -27,12 +27,19 @@ const Footer: React.FC = () => {
           <img
             src={darkTheme ? linkedin_white : linkedin_black}
             alt="linkedin"
-            style={{ width: '20px', height: '20px', marginRight: '10px' }}
+            style={{
+              width: '20px',
+              height: '20px',
+              marginRight: '10px',
+              cursor: 'pointer',
+            }}
+            onClick={() => window.open('https://www.linkedin.com/in/jwangcs')}
           />
           <img
             src={darkTheme ? github_white : github_black}
             alt="github"
-            style={{ width: '20px', height: '20px' }}
+            style={{ width: '20px', height: '20px', cursor: 'pointer' }}
+            onClick={() => window.open('https://github.com/05jwang')}
           />
         </NavbarHeading>
       </NavbarGroup>
