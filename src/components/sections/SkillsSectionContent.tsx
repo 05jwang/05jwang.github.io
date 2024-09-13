@@ -43,11 +43,11 @@ const languages = [
     icon: 'https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png',
   },
   {
-    name: 'Javascript',
+    name: 'JavaScript',
     icon: 'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png',
   },
   {
-    name: 'Typescript',
+    name: 'TypeScript',
     icon: 'https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg',
   },
   {
@@ -69,6 +69,14 @@ const languages = [
   {
     name: 'MATLAB',
     icon: 'https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png',
+  },
+  {
+    name: 'Bash Scripting',
+    icon: 'https://upload.wikimedia.org/wikipedia/commons/4/4b/Bash_Logo_Colored.svg',
+  },
+  {
+    name: 'PowerShell Scripting',
+    icon: 'https://upload.wikimedia.org/wikipedia/commons/a/af/PowerShell_Core_6.0_icon.png',
   },
   {
     name: 'Jakarta Server Pages',
@@ -128,8 +136,8 @@ const frameworks = [
     icon: 'https://upload.wikimedia.org/wikipedia/commons/7/7d/Microsoft_.NET_logo.svg',
   },
   {
-    name: 'Django',
-    icon: 'https://upload.wikimedia.org/wikipedia/commons/7/75/Django_logo.svg',
+    name: 'MongoDB',
+    icon: 'https://upload.wikimedia.org/wikipedia/en/5/5a/MongoDB_Fores-Green.svg',
   },
   {
     name: 'Node.js',
