@@ -70,6 +70,10 @@ const languages = [
     name: 'MATLAB',
     icon: 'https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png',
   },
+  {
+    name: 'Jakarta Server Pages',
+    icon: 'https://projects.eclipse.org/sites/default/files/36201228_10.png',
+  },
 ];
 const libraries = [
   {
@@ -79,6 +83,10 @@ const libraries = [
   {
     name: 'Boost C++ Libraries',
     icon: 'https://www.boost.org/doc/libs/1_84_0/boost.png',
+  },
+  {
+    name: 'OpenSSL',
+    icon: 'https://upload.wikimedia.org/wikipedia/commons/a/a1/OpenSSL_logo.png',
   },
   {
     name: 'NLTK',
@@ -97,12 +105,16 @@ const libraries = [
     icon: 'https://upload.wikimedia.org/wikipedia/commons/2/2d/Tensorflow_logo.svg',
   },
   {
-    name: 'numpy',
+    name: 'NumPy',
     icon: 'https://upload.wikimedia.org/wikipedia/commons/1/1a/NumPy_logo.svg',
   },
   {
     name: 'sci-kit learn',
     icon: 'https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg',
+  },
+  {
+    name: 'RecoilJS',
+    icon: 'https://cdn.worldvectorlogo.com/logos/recoil-js.svg',
   },
 ];
 
