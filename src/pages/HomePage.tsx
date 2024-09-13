@@ -23,11 +23,6 @@ const HomePage: React.FC = () => {
       scroller.scrollTo(section);
     }
   }, [location.state]);
-  const aboutRef = useRef<HTMLDivElement>(null);
-  const experienceRef = useRef<HTMLDivElement>(null);
-  const projectsRef = useRef<HTMLDivElement>(null);
-  const skillsRef = useRef<HTMLDivElement>(null);
-  const contactRef = useRef<HTMLDivElement>(null);
 
   const [darkTheme] = useRecoilState(themeState);
   return (
@@ -38,26 +33,23 @@ const HomePage: React.FC = () => {
       }}
     >
       <Element name="About">
-        <AboutSectionContent sectionRef={aboutRef} theme={darkTheme} />
+        <AboutSectionContent theme={darkTheme} />
       </Element>
 
       <Element name="Experience">
-        <ExperienceSectionContent
-          sectionRef={experienceRef}
-          theme={darkTheme}
-        />
+        <ExperienceSectionContent theme={darkTheme} />
       </Element>
 
       <Element name="Projects">
-        <ProjectsSectionContent sectionRef={projectsRef} theme={darkTheme} />
+        <ProjectsSectionContent theme={darkTheme} />
       </Element>
 
       <Element name="Skills">
-        <SkillsSectionContent sectionRef={skillsRef} theme={darkTheme} />
+        <SkillsSectionContent theme={darkTheme} />
       </Element>
 
       <Element name="Contact">
-        <ContactSectionContent sectionRef={contactRef} theme={darkTheme} />
+        <ContactSectionContent theme={darkTheme} />
       </Element>
     </div>
   );

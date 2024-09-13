@@ -13,7 +13,6 @@ import { NoSkillsInfo } from '../empty/NoSkillsInfo';
 import SectionWrapper from './SectionWrapper';
 
 interface SkillsSectionContentProps {
-  sectionRef: React.RefObject<HTMLDivElement>;
   theme: boolean;
 }
 
@@ -21,108 +20,134 @@ const languages = [
   {
     name: 'C',
     icon: 'https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg',
+    link: 'https://www.open-std.org/jtc1/sc22/wg14/',
   },
   {
     name: 'C++',
     icon: 'https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg',
+    link: 'https://isocpp.org/',
   },
   {
     name: 'C#',
     icon: 'https://upload.wikimedia.org/wikipedia/commons/b/bd/Logo_C_sharp.svg',
+    link: 'https://dotnet.microsoft.com/en-us/languages/csharp',
   },
   {
     name: 'Python',
     icon: 'https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg',
+    link: 'https://www.python.org/',
   },
   {
     name: 'Java',
     icon: 'https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg',
+    link: 'https://www.java.com/',
   },
   {
     name: 'SQL',
     icon: 'https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png',
+    link: 'https://www.iso.org/standard/76583.html',
   },
   {
     name: 'JavaScript',
     icon: 'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png',
+    link: 'https://www.ecma-international.org/publications-and-standards/standards/ecma-262/',
   },
   {
     name: 'TypeScript',
     icon: 'https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg',
+    link: 'https://www.typescriptlang.org/',
   },
   {
     name: 'HTML',
     icon: 'https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg',
+    link: 'https://html.spec.whatwg.org/',
   },
   {
     name: 'CSS',
     icon: 'https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg',
+    link: 'https://www.w3.org/TR/CSS/#css',
   },
   {
     name: 'ARM Assembly',
     icon: 'https://upload.wikimedia.org/wikipedia/commons/7/77/Arm_logo_2017.svg',
+    link: 'https://www.arm.com/architecture',
   },
   {
     name: 'MIPS Assembly',
     icon: 'https://upload.wikimedia.org/wikipedia/commons/9/95/MIPS_Logo_v2.0_Final_Primary.svg',
+    link: 'https://www.mips.com/',
   },
   {
     name: 'MATLAB',
     icon: 'https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png',
+    link: 'https://www.mathworks.com/products/matlab.html',
   },
   {
     name: 'Bash Scripting',
     icon: 'https://upload.wikimedia.org/wikipedia/commons/4/4b/Bash_Logo_Colored.svg',
+    link: 'https://www.gnu.org/software/bash/',
   },
   {
     name: 'PowerShell Scripting',
     icon: 'https://upload.wikimedia.org/wikipedia/commons/a/af/PowerShell_Core_6.0_icon.png',
+    link: 'https://docs.microsoft.com/en-us/powershell/',
   },
   {
     name: 'Jakarta Server Pages',
     icon: 'https://projects.eclipse.org/sites/default/files/36201228_10.png',
+    link: 'https://projects.eclipse.org/projects/ee4j.jsp',
   },
 ];
 const libraries = [
   {
     name: 'React.js',
     icon: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg',
+    link: 'https://react.dev/',
   },
   {
     name: 'Boost C++ Libraries',
     icon: 'https://www.boost.org/doc/libs/1_84_0/boost.png',
+    link: 'https://www.boost.org/',
   },
   {
     name: 'OpenSSL',
     icon: 'https://upload.wikimedia.org/wikipedia/commons/a/a1/OpenSSL_logo.png',
+    link: 'https://www.openssl.org/',
   },
   {
     name: 'NLTK',
     icon: 'https://miro.medium.com/v2/resize:fit:1184/0*zKRz1UgqpOZ4bvuA',
+    link: 'https://www.nltk.org/',
   },
   {
     name: 'pandas',
     icon: 'https://upload.wikimedia.org/wikipedia/commons/2/22/Pandas_mark.svg',
+    link: 'https://pandas.pydata.org/',
   },
   {
     name: 'PyTorch',
     icon: 'https://upload.wikimedia.org/wikipedia/commons/1/10/PyTorch_logo_icon.svg',
+    link: 'https://pytorch.org/',
   },
   {
     name: 'Tensorflow',
     icon: 'https://upload.wikimedia.org/wikipedia/commons/2/2d/Tensorflow_logo.svg',
+    link: 'https://www.tensorflow.org/',
   },
   {
     name: 'NumPy',
     icon: 'https://upload.wikimedia.org/wikipedia/commons/1/1a/NumPy_logo.svg',
+    link: 'https://numpy.org/',
   },
   {
-    name: 'sci-kit learn',
+    name: 'scikit-learn',
     icon: 'https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg',
+    link: 'https://scikit-learn.org/stable/',
   },
   {
-    name: 'RecoilJS',
+    name: 'Recoil.js',
     icon: 'https://cdn.worldvectorlogo.com/logos/recoil-js.svg',
+    link: 'https://recoiljs.org/',
   },
 ];
 
@@ -130,47 +155,57 @@ const frameworks = [
   {
     name: 'Spring Framework',
     icon: 'https://upload.wikimedia.org/wikipedia/commons/7/79/Spring_Boot.svg',
+    link: 'https://spring.io/projects/spring-framework',
   },
   {
     name: '.NET Framework',
     icon: 'https://upload.wikimedia.org/wikipedia/commons/7/7d/Microsoft_.NET_logo.svg',
+    link: 'https://dotnet.microsoft.com/',
   },
   {
     name: 'MongoDB',
     icon: 'https://upload.wikimedia.org/wikipedia/en/5/5a/MongoDB_Fores-Green.svg',
+    link: 'https://www.mongodb.com/',
   },
   {
     name: 'Node.js',
-    icon: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg',
+    icon: 'https://nodejs.org/static/logos/jsIconGreen.svg',
+    link: 'https://nodejs.org/',
   },
   {
     name: 'Django',
     icon: 'https://upload.wikimedia.org/wikipedia/commons/7/75/Django_logo.svg',
+    link: 'https://www.djangoproject.com/',
   },
   {
     name: 'React Native',
     icon: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg',
+    link: 'https://reactnative.dev/',
   },
   {
     name: 'CMake',
     icon: 'https://upload.wikimedia.org/wikipedia/commons/1/13/Cmake.svg',
+    link: 'https://cmake.org/',
   },
   {
     name: 'Vue.js',
     icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1024px-Vue.js_Logo_2.svg.png?20170919082558',
+    link: 'https://vuejs.org/',
   },
   {
     name: 'Angular',
     icon: 'https://upload.wikimedia.org/wikipedia/commons/c/cf/Angular_full_color_logo.svg',
+    link: 'https://angular.io/',
   },
   {
     name: 'CUDA',
     icon: 'https://upload.wikimedia.org/wikipedia/sco/2/21/Nvidia_logo.svg',
+    link: 'https://developer.nvidia.com/cuda-zone',
   },
-
   {
     name: 'Microsoft SQL Server',
     icon: 'https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg',
+    link: 'https://www.microsoft.com/en-us/sql-server',
   },
 ];
 
@@ -217,6 +252,7 @@ export const SkillsSectionContent: React.FC<SkillsSectionContentProps> = (
           width: '200px',
           height: '200px',
         }}
+        onClick={() => window.open(skill.link)}
       >
         <img
           src={skill.icon}
@@ -234,7 +270,7 @@ export const SkillsSectionContent: React.FC<SkillsSectionContentProps> = (
     ));
   };
   return (
-    <section id="Skills" ref={props.sectionRef} style={SectionWrapper}>
+    <section id="Skills" style={SectionWrapper}>
       <h2>Skills</h2>
       <Tabs onChange={handleTabChange}>
         <Tab id="Languages" title="Languages"></Tab>

@@ -15,14 +15,13 @@ import github_black from '../../assets/github_black.svg';
 import github_white from '../../assets/github_white.svg';
 
 interface ContactSectionContentProps {
-  sectionRef: React.RefObject<HTMLDivElement>;
   theme: boolean;
 }
 export const ContactSectionContent: React.FC<ContactSectionContentProps> = (
   props: ContactSectionContentProps,
 ) => {
   return (
-    <section id="Contact" ref={props.sectionRef} style={SectionWrapper}>
+    <section id="Contact" style={SectionWrapper}>
       <h2>Contact</h2>
       <Text>
         <Icon icon="envelope" /> Email:

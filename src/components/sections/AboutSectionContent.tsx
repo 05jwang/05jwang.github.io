@@ -4,7 +4,6 @@ import { Link } from 'react-scroll';
 import SectionWrapper from './SectionWrapper';
 import headshot from '../../assets/headshot.jpg';
 interface AboutSectionContentProps {
-  sectionRef: React.RefObject<HTMLDivElement>;
   theme: boolean;
 }
 
@@ -12,7 +11,7 @@ export const AboutSectionContent: React.FC<AboutSectionContentProps> = (
   props: AboutSectionContentProps,
 ) => {
   return (
-    <section id="About" ref={props.sectionRef} style={SectionWrapper}>
+    <section id="About" style={SectionWrapper}>
       <h2>About</h2>
       <div
         style={{

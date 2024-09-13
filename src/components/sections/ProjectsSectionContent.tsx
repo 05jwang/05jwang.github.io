@@ -8,7 +8,6 @@ import vip from '../../assets/vip.jpg';
 import tarigma from '../../assets/tarigma_corp_logo.jpeg';
 
 interface ProjectsSectionContentProps {
-  sectionRef: React.RefObject<HTMLDivElement>;
   theme: boolean;
 }
 const cardStyle = {
@@ -24,7 +23,7 @@ export const ProjectsSectionContent: React.FC<ProjectsSectionContentProps> = (
   props: ProjectsSectionContentProps,
 ) => {
   return (
-    <section id="Projects" ref={props.sectionRef} style={SectionWrapper}>
+    <section id="Projects" style={SectionWrapper}>
       <h2>Projects</h2>
       <div
         style={{

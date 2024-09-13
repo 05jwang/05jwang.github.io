@@ -11,7 +11,6 @@ import georgiaTech from '../../assets/georgiaTech.svg';
 import SectionWrapper from './SectionWrapper';
 
 interface ExperienceSectionContentProps {
-  sectionRef: React.RefObject<HTMLDivElement>;
   theme: boolean;
 }
 
@@ -19,7 +18,7 @@ export const ExperienceSectionContent: React.FC<
   ExperienceSectionContentProps
 > = (props: ExperienceSectionContentProps) => {
   return (
-    <section id="Experience" ref={props.sectionRef} style={SectionWrapper}>
+    <section id="Experience" style={SectionWrapper}>
       <h2
         style={{
           marginBottom: '20px',
@@ -78,8 +77,7 @@ export const ExperienceSectionContent: React.FC<
           <p>
             Worked on a full stack application for managing a power distribution
             grid and notifying operators of outages. Developed using a Java
-            Spring Boot server and SQL database on the backend and a React
-            frontend.
+            Spring server and SQL database on the backend and a React frontend.
           </p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
@@ -142,7 +140,7 @@ export const ExperienceSectionContent: React.FC<
               : '0 0 20px rgba(0, 0, 0, 0.1)',
             transition: 'background 0.3s ease',
           }}
-          date="June 2024 – May 2026"
+          date="Expected Graduation: May 2026"
           contentArrowStyle={{ borderRight: '7px solid  #75aadb' }}
           iconStyle={{ background: '#75aadb' }}
           icon={
