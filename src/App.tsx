@@ -30,21 +30,19 @@ const App: React.FC = () => {
     <div className={darkTheme ? Classes.DARK : ''} style={appStyles}>
       <NavBar />
       <div style={{ flex: 1 }}>
-        <HashRouter>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/resume" element={<ResumePage />} />
-            <Route path="/projects" element={<ProjectsPage />} />
-            <Route path="/projects/tev" element={<TevProjectPage />} />
-            <Route path="/projects/triage" element={<TriageProjectPage />} />
-            <Route
-              path="/projects/memeintent"
-              element={<MemeIntentProjectPage />}
-            />
-            <Route path="/projects/vip" element={<VIPProjectPage />} />
-            <Route path="/projects/wordle" element={<WordleProjectPage />} />
-          </Routes>
-        </HashRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/resume" element={<ResumePage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/projects/tev" element={<TevProjectPage />} />
+          <Route path="/projects/triage" element={<TriageProjectPage />} />
+          <Route
+            path="/projects/memeintent"
+            element={<MemeIntentProjectPage />}
+          />
+          <Route path="/projects/vip" element={<VIPProjectPage />} />
+          <Route path="/projects/wordle" element={<WordleProjectPage />} />
+        </Routes>
       </div>
       <Footer />
     </div>

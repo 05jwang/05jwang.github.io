@@ -1,11 +1,24 @@
 import React from 'react';
 import { Navbar, Alignment, Button, Switch } from '@blueprintjs/core';
-import { Link } from 'react-scroll';
+import { Link, scroller } from 'react-scroll';
 import { useRecoilState } from 'recoil';
 import { themeState } from '../recoil/atoms/themeState';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const NavBar: React.FC = () => {
   const [darkTheme, setDarkTheme] = useRecoilState(themeState);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleNavigateAndScroll = (section: string) => {
+    console.log('section: ', section);
+    console.log(location);
+    if (location.pathname !== '/') {
+      navigate('/', { state: { section } });
+    } else {
+      scroller.scrollTo(section);
+    }
+  };
 
   const toggleTheme = () => {
     setDarkTheme(!darkTheme);
@@ -32,21 +45,21 @@ const NavBar: React.FC = () => {
           </a>
         </Navbar.Heading>
         <Navbar.Divider />
-        <Link to="About">
-          <Button minimal>About</Button>
-        </Link>
-        <Link to="Experience">
-          <Button minimal>Experience</Button>
-        </Link>
-        <Link to="Projects">
-          <Button minimal>Projects</Button>
-        </Link>
-        <Link to="Skills">
-          <Button minimal>Skills</Button>
-        </Link>
-        <Link to="Contact">
-          <Button minimal>Contact</Button>
-        </Link>
+        <Button minimal onClick={() => handleNavigateAndScroll('About')}>
+          About
+        </Button>
+        <Button minimal onClick={() => handleNavigateAndScroll('Experience')}>
+          Experience
+        </Button>
+        <Button minimal onClick={() => handleNavigateAndScroll('Projects')}>
+          Projects
+        </Button>
+        <Button minimal onClick={() => handleNavigateAndScroll('Skills')}>
+          Skills
+        </Button>
+        <Button minimal onClick={() => handleNavigateAndScroll('Contact')}>
+          Contact
+        </Button>
       </Navbar.Group>
       <Navbar.Group align={Alignment.RIGHT}>
         <Button
