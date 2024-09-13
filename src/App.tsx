@@ -23,7 +23,7 @@ const App: React.FC = () => {
     minHeight: '100vh',
     transition: 'background-color 0.3s ease',
     display: 'flex',
-    flexDirection: 'column',
+    flexDirection: 'column' as 'column',
   };
 
   return (

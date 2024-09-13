@@ -16,7 +16,7 @@ const cardStyle = {
   height: '400px',
   margin: '20px',
   display: 'flex',
-  flexDirection: 'column',
+  flexDirection: 'column' as 'column',
   alignItems: 'center',
 };
 
