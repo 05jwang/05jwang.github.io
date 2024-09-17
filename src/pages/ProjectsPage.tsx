@@ -12,7 +12,7 @@ const ProjectsPage: React.FC = () => {
         marginTop: '50px',
       }}
     >
-      <ProjectsSectionContent sectionRef={ref} theme={darkTheme} />
+      <ProjectsSectionContent theme={darkTheme} />
     </div>
   );
 };
