@@ -172,8 +172,8 @@ export const ExperienceSectionContent: React.FC<
               }}
             />
             <div>
-              <h3>Georgia Institute of Technology</h3>
-              <h4>Computer Science (BS)</h4>
+              <h3>BS in Computer Science</h3>
+              <h4>Georgia Institute of Technology</h4>
               <i>Atlanta, GA</i>
             </div>
           </div>

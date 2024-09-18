@@ -10,27 +10,22 @@ const MemeIntentProjectPage: React.FC = () => {
         alignItems: 'center',
       }}
     >
-      <h1>
-        MemeIntent: An Intent Generation Benchmark for Memes Leveraging
-        Background Knowledge
-      </h1>
+      <h1>MemeIntent: Benchmarking Intent Description Generation for Memes</h1>
       <i>
         By: Jeongsik Park, Khoi PN Nguyen, Terrence Li, Suyesh Shrestha, Megan
         Kim Vu, <strong>Jerry Yining Wang</strong> and Vincent Ng
       </i>
-      <img
+      <br />
+      <iframe
+        src="https://aclanthology.org/2024.sigdial-1.54.pdf"
+        title="MemeIntent: Benchmarking Intent Description Generation for Memes"
         style={{
-          objectFit: 'contain',
-          width: '300px',
-          height: 'auto',
-          margin: '50px',
-          marginBottom: '60px',
-          cursor: 'pointer',
+          width: '100%',
+          height: '1100px',
+          maxWidth: '850px',
         }}
-        src="https://2024.sigdial.org/wp-content/uploads/sites/6/2023/09/cropped-cropped-cropped-cropped-sigdial_site_icon_2-1.png"
-        alt="SIGDIAL"
-        onClick={() => window.open('https://2024.sigdial.org/')}
-      />
+      ></iframe>
+      <br />
       <p
         style={{
           width: '50%',
@@ -47,17 +42,6 @@ const MemeIntentProjectPage: React.FC = () => {
         approaches from the literature to determine that this was in fact a new
         and challenging benchmark.
       </p>
-      <br />
-      <b
-        style={{
-          width: '50%',
-          textAlign: 'center',
-        }}
-      >
-        This paper was accepted to the 2024 SIGDIAL conference, and will be
-        published during the proceedings (September 18-20, 2024). It will be
-        embedded here once published.
-      </b>
       <br />
     </div>
   );

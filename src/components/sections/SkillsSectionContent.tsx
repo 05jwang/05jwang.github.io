@@ -183,11 +183,6 @@ const frameworks = [
     link: 'https://reactnative.dev/',
   },
   {
-    name: 'CMake',
-    icon: 'https://upload.wikimedia.org/wikipedia/commons/1/13/Cmake.svg',
-    link: 'https://cmake.org/',
-  },
-  {
     name: 'Vue.js',
     icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1024px-Vue.js_Logo_2.svg.png?20170919082558',
     link: 'https://vuejs.org/',
@@ -209,6 +204,59 @@ const frameworks = [
   },
 ];
 
+const tools = [
+  {
+    name: 'Git',
+    icon: 'https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg',
+    link: 'https://git-scm.com/',
+  },
+  {
+    name: 'Docker',
+    icon: 'https://www.docker.com/wp-content/uploads/2023/05/symbol_blue-docker-logo.png',
+    link: 'https://www.docker.com/',
+  },
+  {
+    name: 'Jenkins',
+    icon: 'https://upload.wikimedia.org/wikipedia/commons/e/e9/Jenkins_logo.svg',
+    link: 'https://www.jenkins.io/',
+  },
+  {
+    name: 'CMake',
+    icon: 'https://upload.wikimedia.org/wikipedia/commons/1/13/Cmake.svg',
+    link: 'https://cmake.org/',
+  },
+  {
+    name: 'Jira',
+    icon: 'https://www.cdnlogo.com/logos/j/28/jira.svg',
+    link: 'https://www.atlassian.com/software/jira',
+  },
+  {
+    name: 'Jupyter Notebook',
+    icon: 'https://upload.wikimedia.org/wikipedia/commons/3/38/Jupyter_logo.svg',
+    link: 'https://jupyter.org/',
+  },
+  {
+    name: 'RabbitMQ',
+    icon: 'https://upload.wikimedia.org/wikipedia/commons/7/71/RabbitMQ_logo.svg',
+    link: 'https://www.rabbitmq.com/',
+  },
+  {
+    name: 'mosquitto',
+    icon: 'https://mosquitto.org/images/mosquitto-text-side-28.png',
+    link: 'https://mosquitto.org/',
+  },
+  {
+    name: 'Apache Tomcat',
+    icon: 'https://upload.wikimedia.org/wikipedia/commons/f/fe/Apache_Tomcat_logo.svg',
+    link: 'http://tomcat.apache.org/',
+  },
+  {
+    name: 'Gradle',
+    icon: 'https://gradle.org/images/gradle-knowledge-graph-logo.png?20170228',
+    link: 'https://gradle.org/',
+  },
+];
+
 export const SkillsSectionContent: React.FC<SkillsSectionContentProps> = (
   props: SkillsSectionContentProps,
 ) => {
@@ -225,6 +273,8 @@ export const SkillsSectionContent: React.FC<SkillsSectionContentProps> = (
         return libraries;
       case 'Frameworks':
         return frameworks;
+      case 'Tools':
+        return tools;
       default:
         return languages;
     }
@@ -276,6 +326,7 @@ export const SkillsSectionContent: React.FC<SkillsSectionContentProps> = (
         <Tab id="Languages" title="Languages"></Tab>
         <Tab id="Libraries" title="Libraries"></Tab>
         <Tab id="Frameworks" title="Frameworks"></Tab>
+        <Tab id="Tools" title="Tools"></Tab>
         <InputGroup
           placeholder="Search..."
           value={searchQuery}
