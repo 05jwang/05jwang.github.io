@@ -59,7 +59,7 @@ export const ProjectsSectionContent: React.FC<ProjectsSectionContentProps> = (
           onClick={() => (window.location.href = '#/projects/memeintent')}
         >
           <h3>MemeIntent Paper</h3>
-          <i>Accepted to SIGDIAL 2024, to be published Sep. 18th</i>
+          <i>Accepted to SIGDIAL 2024</i>
           <img
             style={{
               objectFit: 'contain',
