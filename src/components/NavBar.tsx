@@ -11,8 +11,6 @@ const NavBar: React.FC = () => {
   const location = useLocation();
 
   const handleNavigateAndScroll = (section: string) => {
-    console.log('section: ', section);
-    console.log(location);
     if (location.pathname !== '/') {
       navigate('/', { state: { section } });
     } else {
