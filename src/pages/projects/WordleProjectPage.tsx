@@ -3,6 +3,17 @@ import wordle from '../../assets/wordle.png';
 import { Button } from '@blueprintjs/core';
 
 const WordleProjectPage: React.FC = () => {
+  const handleDownload = () => {
+    const filePath = '/assets/wordle-asm.zip';
+
+    const link = document.createElement('a');
+    link.href = filePath;
+    link.download = 'wordle-asm.zip'; 
+    document.body.appendChild(link);
+    link.click();
+
+    document.body.removeChild(link);
+  }
   return (
     <div
       style={{
@@ -41,12 +52,7 @@ const WordleProjectPage: React.FC = () => {
         icon="code"
         text="Download Source Code"
         onClick={() => {
-          const link = document.createElement('a');
-          link.href = '/assets/wordle-asm.zip';
-          link.download = 'wordle-asm.zip';
-          document.body.appendChild(link);
-          link.click();
-          document.body.removeChild(link);
+          handleDownload();
         }}
       />
     </div>
