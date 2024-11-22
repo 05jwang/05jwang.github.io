@@ -4,7 +4,7 @@ import { Button } from '@blueprintjs/core';
 
 const WordleProjectPage: React.FC = () => {
   const handleDownload = () => {
-    const filePath = '/assets/wordle-asm.zip';
+    const filePath = '/wordle-asm.zip';
 
     const link = document.createElement('a');
     link.href = filePath;
