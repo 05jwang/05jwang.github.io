@@ -38,7 +38,7 @@ export const ProjectsSectionContent: React.FC<ProjectsSectionContentProps> = (
           style={cardStyle}
           onClick={() => (window.location.href = '#/projects/tev')}
         >
-          <h3>Tarigma-Event-Viewer</h3>
+          <h3>Tarigma-Event-Viewer Video Demo</h3>
           <i>December 2023 – August 2024</i>
           <img
             style={{
@@ -82,7 +82,7 @@ export const ProjectsSectionContent: React.FC<ProjectsSectionContentProps> = (
           style={cardStyle}
           onClick={() => (window.location.href = '#/projects/vip')}
         >
-          <h3>Advancing Material Discovery with AI</h3>
+          <h3>Material Discovery with AI Presentation</h3>
           <i>June 2024 – Present</i>
           <img
             style={{

@@ -178,7 +178,7 @@ export const ExperienceSectionContent: React.FC<
             </div>
           </div>
           <p>
-            GPA: 4.0/4.0
+            GPA: 3.82/4.0
             <br />
             Threads: (Artificial) Intelligence and Information Internetworks
             <br />

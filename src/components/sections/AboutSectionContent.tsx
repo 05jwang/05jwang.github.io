@@ -26,9 +26,9 @@ export const AboutSectionContent: React.FC<AboutSectionContentProps> = (
             at Georgia Tech. I'm passionate about software development and I
             enjoy working on projects where I can make a positive impact. I have
             experience with full-stack web development, IoT C/C++ development,
-            and Natural Language Processing (NLP) research. I'm always eager to
-            learn new technologies and improve my skills, so reach out to me if
-            you have any cool projects or opportunities!{' '}
+            and Machine Learning research. I'm always eager to learn new
+            technologies and improve my skills, so reach out to me if you have
+            any cool projects or opportunities!{' '}
           </p>
           <div
             style={{

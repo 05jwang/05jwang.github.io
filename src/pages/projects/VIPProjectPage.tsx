@@ -1,6 +1,9 @@
 import React from 'react';
 import vip from '../../assets/vip.jpg';
 
+const slideURL =
+  'https://docs.google.com/presentation/d/1mqUBlAXYTzNzxMMXmdWIWAFFxWNEe6-dmbgqgqSju6I';
+
 const VIPProjectPage: React.FC = () => {
   return (
     <div
@@ -12,16 +15,13 @@ const VIPProjectPage: React.FC = () => {
       }}
     >
       <h1>Advancing Material Discovery with AI</h1>
-      <img
-        style={{
-          objectFit: 'contain',
-          width: 'auto',
-          height: '250px',
-          margin: '15px',
-        }}
-        src={vip}
-        alt="VIP"
-      />
+      <iframe
+        src={slideURL + '/preview?'}
+        style={{ marginBottom: '2rem' }}
+        width="640"
+        height="398"
+        allowFullScreen
+      ></iframe>
       <p
         style={{
           width: '50%',
@@ -29,12 +29,14 @@ const VIPProjectPage: React.FC = () => {
         }}
       >
         Advancing Material Discovery with AI is my junior capstone project
-        required for my degree in Computer Science. The project involves
-        creating models to assist in material science research. I am part of the
-        inverse design team, which is trying to create a model that can generate
-        candidate materials based on a set of desired properties (as opposed to
-        the traditional method of trying to predict the properties of a material
-        based on its structure).
+        required for my degree in Computer Science. We developing an active
+        learning framework to try and generate materials with a desired
+        spectrum. Since the forward problem is already well understood (given a
+        material, predict its spectrum), we are focused on solving the inverse
+        problem (given a spectrum, predict a material) by leveraging models that
+        can solve the forward problem in an active learning framework. I am
+        currently working on a diffusion-based generative model to improve the
+        accuracy of the initial sampling.
       </p>
     </div>
   );
