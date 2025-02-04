@@ -7,6 +7,8 @@ import {
 } from 'react-vertical-timeline-component';
 import tarigma_white from '../../assets/tarigma_white.png';
 import tarigma_black from '../../assets/tarigma_black.png';
+import amazon_white from '../../assets/amazon_white.png';
+import amazon_black from '../../assets/amazon_black.png';
 import georgiaTech from '../../assets/georgiaTech.svg';
 import SectionWrapper from './SectionWrapper';
 
@@ -24,7 +26,7 @@ export const ExperienceSectionContent: React.FC<
           marginBottom: '20px',
         }}
       >
-        Experience
+        Work Experience
       </h2>
 
       <VerticalTimeline lineColor="#75aadb">
@@ -36,7 +38,58 @@ export const ExperienceSectionContent: React.FC<
               : '0 0 20px rgba(0, 0, 0, 0.1)',
             transition: 'background 0.3s ease',
           }}
-          date="May 2023 – Present"
+          date="Expected Start: May 2025"
+          contentArrowStyle={{ borderRight: '7px solid  #75aadb' }}
+          iconStyle={{ background: '#75aadb' }}
+          icon={
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                height: '110%',
+              }}
+            >
+              <Icon icon="briefcase" />
+            </div>
+          }
+        >
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              cursor: 'pointer',
+            }}
+            onClick={() => window.open('https://www.aboutamazon.com/')}
+          >
+            <img
+              src={props.theme ? amazon_white : amazon_black}
+              alt="Amazon"
+              style={{
+                width: '50px',
+                marginRight: '10px',
+              }}
+            />
+            <div>
+              <h3>Incoming SDE Intern</h3>
+              <h4>Amazon Inc.</h4>
+              <i>Bellevue, WA</i>
+            </div>
+          </div>
+          <p>
+            Accepted a Software Development Engineering Internship offer with
+            Amazon Inc. for the Summer of 2025.
+          </p>
+        </VerticalTimelineElement>
+        <VerticalTimelineElement
+          contentStyle={{
+            background: props.theme ? '#383e47' : '#ffffff',
+            boxShadow: props.theme
+              ? '0 0 20px rgba(0, 0, 0, 0.2)'
+              : '0 0 20px rgba(0, 0, 0, 0.1)',
+            transition: 'background 0.3s ease',
+          }}
+          date="May 2023 – Aug 2024"
           contentArrowStyle={{ borderRight: '7px solid  #75aadb' }}
           iconStyle={{ background: '#75aadb' }}
           icon={
@@ -172,17 +225,25 @@ export const ExperienceSectionContent: React.FC<
               }}
             />
             <div>
-              <h3>BS in Computer Science</h3>
+              <h3>B.S. in Computer Science</h3>
               <h4>Georgia Institute of Technology</h4>
               <i>Atlanta, GA</i>
             </div>
           </div>
           <p>
-            GPA: 3.82/4.0
+            <b>GPA: 3.82/4.0</b>
             <br />
-            Threads: (Artificial) Intelligence and Information Internetworks
+            <b>Coursework: </b>
+            Data Structures & Algorithms, Linear Algebra, Intro to Databases,
+            Objects & Design, Computer Organization & Programming,
+            Object-Oriented Programming, Probability and Statistics,
+            Multivariable Calculus
             <br />
-            Clubs and Societies: GT Runnin’ Wreck, Big Data Big Impact
+            <b>Threads: </b>(Artificial) Intelligence and Information
+            Internetworks
+            <br />
+            <b>Activities and Societies: </b>Advancing Material Discovery VIP
+            Project, GT Runnin’ Wreck, Big Data Big Impact
           </p>
         </VerticalTimelineElement>
       </VerticalTimeline>
