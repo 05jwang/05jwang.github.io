@@ -1,6 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { Element, scroller } from 'react-scroll';
+import { useLocation } from 'react-router-dom';
 
 const TevProjectPage: React.FC = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    scroller.scrollTo('tev', {
+      offset: -50,
+    });
+  }, [location.state]);
   return (
     <div
       style={{
@@ -10,7 +19,9 @@ const TevProjectPage: React.FC = () => {
         alignItems: 'center',
       }}
     >
-      <h1>Tarigma Event Viewer</h1>
+      <Element name="tev">
+        <h1>Tarigma Event Viewer</h1>
+      </Element>
       <iframe
         style={{ marginBottom: '2rem' }}
         width="560"

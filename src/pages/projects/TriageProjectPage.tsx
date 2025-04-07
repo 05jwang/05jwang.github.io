@@ -1,6 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { Element, scroller } from 'react-scroll';
+import { useLocation } from 'react-router-dom';
+
 import tarigma from '../../assets/tarigma_corp_logo.jpeg';
 const TriageProjectPage: React.FC = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    scroller.scrollTo('header', {
+      offset: -50,
+    });
+  }, [location.state]);
   return (
     <div
       style={{
@@ -10,7 +20,9 @@ const TriageProjectPage: React.FC = () => {
         alignItems: 'center',
       }}
     >
-      <h1>Triage Fault Cause Predictor Proof-of-Concept</h1>
+      <Element name="header">
+        <h1>Triage Fault Cause Predictor Proof-of-Concept</h1>
+      </Element>
       <img
         style={{
           objectFit: 'contain',

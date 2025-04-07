@@ -1,6 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { Element, scroller } from 'react-scroll';
+import { useLocation } from 'react-router-dom';
 
 const MemeIntentProjectPage: React.FC = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    scroller.scrollTo('memeintent', {
+      offset: -50,
+    });
+  }, [location.state]);
+
   return (
     <div
       style={{
@@ -10,7 +20,11 @@ const MemeIntentProjectPage: React.FC = () => {
         alignItems: 'center',
       }}
     >
-      <h1>MemeIntent: Benchmarking Intent Description Generation for Memes</h1>
+      <Element name="memeintent">
+        <h1>
+          MemeIntent: Benchmarking Intent Description Generation for Memes
+        </h1>
+      </Element>
       <i>
         By: Jeongsik Park, Khoi PN Nguyen, Terrence Li, Suyesh Shrestha, Megan
         Kim Vu, <strong>Jerry Yining Wang</strong> and Vincent Ng

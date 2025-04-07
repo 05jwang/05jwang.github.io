@@ -1,8 +1,9 @@
 // src/pages/HomePage.tsx
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Text, Icon, Card } from '@blueprintjs/core';
 import { useRecoilState } from 'recoil';
 import { themeState } from '../recoil/atoms/themeState';
+import { mobileState } from '../recoil/atoms/mobileState';
 import { Element, scroller } from 'react-scroll';
 import { useLocation } from 'react-router-dom';
 
@@ -15,6 +16,7 @@ import { ContactSectionContent } from '../components/sections/ContactSectionCont
 const HomePage: React.FC = () => {
   const location = useLocation();
 
+  const [isMobile, setIsMobile] = useRecoilState(mobileState);
   useEffect(() => {
     // Check if a section was passed in the navigation state
     if (location.state && location.state.section) {
@@ -23,6 +25,13 @@ const HomePage: React.FC = () => {
       scroller.scrollTo(section);
     }
   }, [location.state]);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 700);
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const [darkTheme] = useRecoilState(themeState);
   return (
@@ -33,7 +42,7 @@ const HomePage: React.FC = () => {
       }}
     >
       <Element name="About">
-        <AboutSectionContent theme={darkTheme} />
+        <AboutSectionContent theme={darkTheme} isMobile={isMobile} />
       </Element>
 
       <Element name="Experience">
@@ -41,15 +50,15 @@ const HomePage: React.FC = () => {
       </Element>
 
       <Element name="Projects">
-        <ProjectsSectionContent theme={darkTheme} />
+        <ProjectsSectionContent theme={darkTheme} isMobile={isMobile} />
       </Element>
 
       <Element name="Skills">
-        <SkillsSectionContent theme={darkTheme} />
+        <SkillsSectionContent theme={darkTheme} isMobile={isMobile} />
       </Element>
 
       <Element name="Contact">
-        <ContactSectionContent theme={darkTheme} />
+        <ContactSectionContent theme={darkTheme} isMobile={isMobile} />
       </Element>
     </div>
   );

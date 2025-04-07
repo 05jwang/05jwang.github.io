@@ -1,19 +1,29 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { Element, scroller } from 'react-scroll';
+import { useLocation } from 'react-router-dom';
+
 import wordle from '../../assets/wordle.png';
 import { Button } from '@blueprintjs/core';
 
 const WordleProjectPage: React.FC = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    scroller.scrollTo('header', {
+      offset: -50,
+    });
+  }, [location.state]);
   const handleDownload = () => {
     const filePath = '/wordle-asm.zip';
 
     const link = document.createElement('a');
     link.href = filePath;
-    link.download = 'wordle-asm.zip'; 
+    link.download = 'wordle-asm.zip';
     document.body.appendChild(link);
     link.click();
 
     document.body.removeChild(link);
-  }
+  };
   return (
     <div
       style={{
@@ -23,7 +33,9 @@ const WordleProjectPage: React.FC = () => {
         alignItems: 'center',
       }}
     >
-      <h1>wordle-asm</h1>
+      <Element name="header">
+        <h1>wordle-asm</h1>
+      </Element>
       <img
         style={{
           objectFit: 'contain',

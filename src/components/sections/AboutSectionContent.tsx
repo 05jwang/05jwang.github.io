@@ -5,6 +5,7 @@ import SectionWrapper from './SectionWrapper';
 import headshot from '../../assets/headshot.jpg';
 interface AboutSectionContentProps {
   theme: boolean;
+  isMobile: boolean;
 }
 
 export const AboutSectionContent: React.FC<AboutSectionContentProps> = (
@@ -13,6 +14,19 @@ export const AboutSectionContent: React.FC<AboutSectionContentProps> = (
   return (
     <section id="About" style={SectionWrapper}>
       <h2>About</h2>
+      {props.isMobile && (
+        <img
+          src={headshot}
+          alt="Jerry Wang"
+          style={{
+            borderRadius: '80%',
+            margin: '20px',
+            width: '200px',
+            height: 'auto',
+            objectFit: 'cover',
+          }}
+        />
+      )}
       <div
         style={{
           display: 'flex',
@@ -21,7 +35,13 @@ export const AboutSectionContent: React.FC<AboutSectionContentProps> = (
         }}
       >
         <div>
-          <p style={{ maxWidth: '600px', marginRight: '20px' }}>
+          <p
+            style={{
+              maxWidth: '600px',
+              marginRight: props.isMobile ? ' ' : '20px',
+              textAlign: props.isMobile ? 'center' : 'left',
+            }}
+          >
             Hey there! My name is Jerry Wang, and I'm a computer science student
             at Georgia Tech. I'm passionate about software development and I
             enjoy working on projects where I can make a positive impact. I have
@@ -56,16 +76,18 @@ export const AboutSectionContent: React.FC<AboutSectionContentProps> = (
             </Link>
           </div>
         </div>
-        <img
-          src={headshot}
-          alt="Jerry Wang"
-          style={{
-            borderRadius: '80%',
-            width: '200px',
-            height: 'auto',
-            objectFit: 'cover',
-          }}
-        />
+        {!props.isMobile && (
+          <img
+            src={headshot}
+            alt="Jerry Wang"
+            style={{
+              borderRadius: '80%',
+              width: '200px',
+              height: 'auto',
+              objectFit: 'cover',
+            }}
+          />
+        )}
       </div>
     </section>
   );

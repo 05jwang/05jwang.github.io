@@ -1,6 +1,7 @@
 import React from 'react';
 import { useRecoilState } from 'recoil';
 import { themeState } from '../recoil/atoms/themeState';
+import { mobileState } from '../recoil/atoms/mobileState';
 import {
   Alignment,
   Navbar,
@@ -14,14 +15,17 @@ import github_white from '../assets/github_white.svg';
 
 const Footer: React.FC = () => {
   const [darkTheme] = useRecoilState(themeState);
+  const [isMobile] = useRecoilState(mobileState);
   return (
     <Navbar>
-      <NavbarGroup align={Alignment.LEFT}>
-        <NavbarHeading>
-          Created by Jerry Wang with <a href="https://reactjs.org/">React</a>{' '}
-          and <a href="https://blueprintjs.com/">Blueprint</a>
-        </NavbarHeading>
-      </NavbarGroup>
+      {!isMobile && (
+        <NavbarGroup align={Alignment.LEFT}>
+          <NavbarHeading>
+            Copyright © 2025 Jerry Wang. Released under the MIT License.
+          </NavbarHeading>
+        </NavbarGroup>
+      )}
+
       <NavbarGroup align={Alignment.RIGHT}>
         <NavbarHeading>
           <img

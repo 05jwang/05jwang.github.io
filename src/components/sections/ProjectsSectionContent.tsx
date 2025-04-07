@@ -9,19 +9,20 @@ import tarigma from '../../assets/tarigma_corp_logo.jpeg';
 
 interface ProjectsSectionContentProps {
   theme: boolean;
+  isMobile: boolean;
 }
-const cardStyle = {
-  width: '500px',
-  height: '400px',
-  margin: '20px',
-  display: 'flex',
-  flexDirection: 'column' as 'column',
-  alignItems: 'center',
-};
 
 export const ProjectsSectionContent: React.FC<ProjectsSectionContentProps> = (
   props: ProjectsSectionContentProps,
 ) => {
+  const cardStyle = {
+    width: 'min(500px, 90%)',
+    margin: '20px',
+    display: 'flex',
+    height: props.isMobile ? '450px' : '400px',
+    flexDirection: 'column' as 'column',
+    alignItems: 'center',
+  };
   return (
     <section id="Projects" style={SectionWrapper}>
       <h2>Projects</h2>
@@ -45,7 +46,8 @@ export const ProjectsSectionContent: React.FC<ProjectsSectionContentProps> = (
               objectFit: 'contain',
               width: 'auto',
               height: '250px',
-              margin: '15px',
+              marginTop: '15px',
+              marginBottom: '15px',
             }}
             src={tev_homepage}
             alt="Tarigma Event Viewer"
@@ -65,7 +67,7 @@ export const ProjectsSectionContent: React.FC<ProjectsSectionContentProps> = (
               objectFit: 'contain',
               width: '300px',
               height: 'auto',
-              margin: '50px',
+              marginTop: '50px',
               marginBottom: '60px',
             }}
             src="https://2024.sigdial.org/wp-content/uploads/sites/6/2023/09/cropped-cropped-cropped-cropped-sigdial_site_icon_2-1.png"
@@ -89,7 +91,8 @@ export const ProjectsSectionContent: React.FC<ProjectsSectionContentProps> = (
               objectFit: 'contain',
               width: 'auto',
               height: '250px',
-              margin: '15px',
+              marginTop: '15px',
+              marginBottom: '15px',
             }}
             src={vip}
             alt="VIP"
@@ -116,7 +119,8 @@ export const ProjectsSectionContent: React.FC<ProjectsSectionContentProps> = (
               objectFit: 'contain',
               width: 'auto',
               height: '250px',
-              margin: '15px',
+              marginTop: '15px',
+              marginBottom: '15px',
             }}
             src={tarigma}
             alt="Tarigma"
@@ -144,7 +148,8 @@ export const ProjectsSectionContent: React.FC<ProjectsSectionContentProps> = (
               objectFit: 'contain',
               width: 'auto',
               height: '250px',
-              margin: '15px',
+              marginTop: '15px',
+              marginBottom: '15px',
             }}
             src={wordle}
             alt="Wordle"

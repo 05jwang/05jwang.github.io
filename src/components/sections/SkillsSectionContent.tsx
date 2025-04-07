@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import {
   Text,
   Icon,
@@ -8,12 +8,12 @@ import {
   InputGroup,
   NonIdealState,
 } from '@blueprintjs/core';
-import { useRecoilState } from 'recoil';
 import { NoSkillsInfo } from '../empty/NoSkillsInfo';
 import SectionWrapper from './SectionWrapper';
 
 interface SkillsSectionContentProps {
   theme: boolean;
+  isMobile: boolean;
 }
 
 const languages = [
@@ -299,8 +299,8 @@ export const SkillsSectionContent: React.FC<SkillsSectionContentProps> = (
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          width: '200px',
-          height: '200px',
+          width: props.isMobile ? '135px' : '200px',
+          height: props.isMobile ? '135px' : '200px',
         }}
         onClick={() => window.open(skill.link)}
       >
@@ -308,8 +308,8 @@ export const SkillsSectionContent: React.FC<SkillsSectionContentProps> = (
           src={skill.icon}
           alt={skill.name}
           style={{
-            width: '100px',
-            height: '100px',
+            width: props.isMobile ? '65px' : '100px',
+            height: props.isMobile ? '65px' : '100px',
             objectFit: 'contain',
             marginBottom: '15px',
             marginTop: '10px',
@@ -327,15 +327,34 @@ export const SkillsSectionContent: React.FC<SkillsSectionContentProps> = (
         <Tab id="Libraries" title="Libraries"></Tab>
         <Tab id="Frameworks" title="Frameworks"></Tab>
         <Tab id="Tools" title="Tools"></Tab>
-        <InputGroup
-          placeholder="Search..."
-          value={searchQuery}
-          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-            setSearchQuery(e.target.value)
-          }
-          style={{ marginLeft: '50px' }}
-        />
+        {!props.isMobile && (
+          <InputGroup
+            placeholder="Search..."
+            value={searchQuery}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              setSearchQuery(e.target.value)
+            }
+            style={{ marginLeft: '30px' }}
+          />
+        )}
       </Tabs>
+      {props.isMobile && (
+        <div
+          style={{
+            marginTop: '10px',
+            width: 'min(90%, 300px)',
+          }}
+        >
+          <InputGroup
+            placeholder="Search..."
+            value={searchQuery}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              setSearchQuery(e.target.value)
+            }
+            fill
+          />
+        </div>
+      )}
       <br />
       <div
         style={{

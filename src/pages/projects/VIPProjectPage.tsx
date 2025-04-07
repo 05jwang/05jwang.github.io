@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { Element, scroller } from 'react-scroll';
+import { useLocation } from 'react-router-dom';
+
 import vip from '../../assets/vip.jpg';
 
 const slideURL =
   'https://docs.google.com/presentation/d/1mqUBlAXYTzNzxMMXmdWIWAFFxWNEe6-dmbgqgqSju6I';
 
 const VIPProjectPage: React.FC = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    scroller.scrollTo('header', {
+      offset: -50,
+    });
+  }, [location.state]);
   return (
     <div
       style={{
@@ -14,7 +24,9 @@ const VIPProjectPage: React.FC = () => {
         alignItems: 'center',
       }}
     >
-      <h1>Advancing Material Discovery with AI</h1>
+      <Element name="header">
+        <h1>Advancing Material Discovery with AI</h1>
+      </Element>
       <iframe
         src={slideURL + '/preview?'}
         style={{ marginBottom: '2rem' }}

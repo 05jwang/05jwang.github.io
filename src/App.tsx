@@ -7,7 +7,6 @@ import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import ProjectsPage from './pages/ProjectsPage';
 import ResumePage from './pages/ResumePage';
-import StatusPage from './pages/StatusPage';
 import NotFoundPage from './pages/NotFoundPage';
 import { Classes } from '@blueprintjs/core';
 import TevProjectPage from './pages/projects/TevProjectPage';
@@ -44,7 +43,6 @@ const App: React.FC = () => {
           />
           <Route path="/projects/vip" element={<VIPProjectPage />} />
           <Route path="/projects/wordle" element={<WordleProjectPage />} />
-          <Route path="/actuatorStatus" element={<StatusPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </div>

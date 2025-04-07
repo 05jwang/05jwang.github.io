@@ -16,6 +16,7 @@ import github_white from '../../assets/github_white.svg';
 
 interface ContactSectionContentProps {
   theme: boolean;
+  isMobile: boolean;
 }
 export const ContactSectionContent: React.FC<ContactSectionContentProps> = (
   props: ContactSectionContentProps,
@@ -24,10 +25,14 @@ export const ContactSectionContent: React.FC<ContactSectionContentProps> = (
     <section id="Contact" style={SectionWrapper}>
       <h2>Contact</h2>
       <Text>
-        <Icon icon="envelope" /> Email:
-        <a href="mailto:05jwang@gmail.com">05jwang@gmail.com</a>
+        <Icon icon="envelope" /> Email:{' '}
+        <a href="mailto:05jwang@gmail.com">
+          {props.isMobile ? <>Personal</> : <>05jwang@gmail.com</>}
+        </a>
         {' | '}
-        <a href="mailto:jwang3450@gatech.edu">jwang3450@gatech.edu</a>
+        <a href="mailto:jwang3450@gatech.edu">
+          {props.isMobile ? <>University</> : <>jwang3450@gatech.edu</>}
+        </a>
         {'\n'}
       </Text>
       <Text>
