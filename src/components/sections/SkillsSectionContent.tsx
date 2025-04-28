@@ -309,13 +309,22 @@ export const SkillsSectionContent: React.FC<SkillsSectionContentProps> = (
           alt={skill.name}
           style={{
             width: '60%',
-            height: '60%',
+            aspectRatio: '1/1',
             objectFit: 'contain',
             marginBottom: '15px',
             marginTop: '10px',
           }}
         />
-        <Text>{skill.name}</Text>
+        <Text
+          style={{
+            whiteSpace: 'nowrap',
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+            maxWidth: '100%',
+          }}
+        >
+          {skill.name}
+        </Text>
       </Card>
     ));
   };

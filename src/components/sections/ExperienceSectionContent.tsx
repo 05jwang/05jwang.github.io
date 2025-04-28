@@ -76,10 +76,7 @@ export const ExperienceSectionContent: React.FC<
               <i>Bellevue, WA</i>
             </div>
           </div>
-          <p>
-            Accepted a Software Development Engineering Internship offer with
-            Amazon Inc. for the Summer of 2025.
-          </p>
+          <p>Joining the Last Mile Routing and Planning team</p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           contentStyle={{
@@ -232,16 +229,16 @@ export const ExperienceSectionContent: React.FC<
           </div>
           <p>
             <b>GPA: 3.82/4.0</b>
-            <br />
+            <hr style={{ marginTop: '10px', marginBottom: '10px' }} />
             <b>Coursework: </b>
             Data Structures & Algorithms, Linear Algebra, Intro to Databases,
             Objects & Design, Computer Organization & Programming,
             Object-Oriented Programming, Probability and Statistics,
             Multivariable Calculus
-            <br />
+            <hr style={{ marginTop: '10px', marginBottom: '10px' }} />
             <b>Threads: </b>(Artificial) Intelligence and Information
             Internetworks
-            <br />
+            <hr style={{ marginTop: '10px', marginBottom: '10px' }} />
             <b>Activities and Societies: </b>Advancing Material Discovery VIP
             Project, GT Runnin’ Wreck, Big Data Big Impact
           </p>
