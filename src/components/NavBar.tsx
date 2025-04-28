@@ -62,7 +62,7 @@ const NavBar: React.FC = () => {
             />
             <Popover
               minimal
-              position="auto-end"
+              position="bottom-right"
               content={
                 <div
                   style={{

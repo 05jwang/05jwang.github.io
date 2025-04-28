@@ -94,7 +94,7 @@ const languages = [
   },
   {
     name: 'Jakarta Server Pages',
-    icon: 'https://projects.eclipse.org/sites/default/files/36201228_10.png',
+    icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Jakarta_ee_logo_schooner_color_stacked_default.svg/1200px-Jakarta_ee_logo_schooner_color_stacked_default.svg.png',
     link: 'https://projects.eclipse.org/projects/ee4j.jsp',
   },
 ];
@@ -299,8 +299,8 @@ export const SkillsSectionContent: React.FC<SkillsSectionContentProps> = (
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          width: props.isMobile ? '135px' : '200px',
-          height: props.isMobile ? '135px' : '200px',
+          width: props.isMobile ? '40%' : '20%',
+          aspectRatio: '1/1',
         }}
         onClick={() => window.open(skill.link)}
       >
@@ -308,8 +308,8 @@ export const SkillsSectionContent: React.FC<SkillsSectionContentProps> = (
           src={skill.icon}
           alt={skill.name}
           style={{
-            width: props.isMobile ? '65px' : '100px',
-            height: props.isMobile ? '65px' : '100px',
+            width: '60%',
+            height: '60%',
             objectFit: 'contain',
             marginBottom: '15px',
             marginTop: '10px',
