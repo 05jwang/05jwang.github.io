@@ -23,9 +23,25 @@ export const ProjectsSectionContent: React.FC<ProjectsSectionContentProps> = (
     flexDirection: 'column' as 'column',
     alignItems: 'center',
   };
+  const imageStyle = {
+    width: '100%',
+    height: 'auto',
+    objectFit: 'contain' as 'contain',
+  };
+  const imageDivStyle = {
+    marginTop: '10px',
+    marginBottom: '10px',
+    display: 'flex',
+    width: '90%',
+    height: '70%',
+  };
+  const textStyle = {
+    maxWidth: '400px',
+    textAlign: 'center' as 'center',
+  };
   return (
     <section id="Projects" style={SectionWrapper}>
-      <h2>Projects</h2>
+      <h2>Portfolio</h2>
       <div
         style={{
           display: 'flex',
@@ -41,17 +57,13 @@ export const ProjectsSectionContent: React.FC<ProjectsSectionContentProps> = (
         >
           <h3>Tarigma-Event-Viewer Video Demo</h3>
           <i>December 2023 – August 2024</i>
-          <img
-            style={{
-              objectFit: 'contain',
-              width: 'auto',
-              height: '250px',
-              marginTop: '15px',
-              marginBottom: '15px',
-            }}
-            src={tev_homepage}
-            alt="Tarigma Event Viewer"
-          />
+          <div style={imageDivStyle}>
+            <img
+              style={imageStyle}
+              src={tev_homepage}
+              alt="Tarigma Event Viewer"
+            />
+          </div>
           <p>A dashboard for viewing and analyzing Electrical Faults</p>
         </Card>
         <Card
@@ -62,17 +74,13 @@ export const ProjectsSectionContent: React.FC<ProjectsSectionContentProps> = (
         >
           <h3>MemeIntent Paper</h3>
           <i>Accepted to SIGDIAL 2024</i>
-          <img
-            style={{
-              objectFit: 'contain',
-              width: '300px',
-              height: 'auto',
-              marginTop: '50px',
-              marginBottom: '60px',
-            }}
-            src="https://2024.sigdial.org/wp-content/uploads/sites/6/2023/09/cropped-cropped-cropped-cropped-sigdial_site_icon_2-1.png"
-            alt="SIGDIAL"
-          />
+          <div style={imageDivStyle}>
+            <img
+              style={imageStyle}
+              src="https://2024.sigdial.org/wp-content/uploads/sites/6/2023/09/cropped-cropped-cropped-cropped-sigdial_site_icon_2-1.png"
+              alt="SIGDIAL"
+            />
+          </div>
           <p style={{ maxWidth: '400px', textAlign: 'center' }}>
             Providing baseline evaluations paper on a new dataset for meme
             classification
@@ -86,17 +94,9 @@ export const ProjectsSectionContent: React.FC<ProjectsSectionContentProps> = (
         >
           <h3>Material Discovery with AI Presentation</h3>
           <i>June 2024 – Present</i>
-          <img
-            style={{
-              objectFit: 'contain',
-              width: 'auto',
-              height: '250px',
-              marginTop: '15px',
-              marginBottom: '15px',
-            }}
-            src={vip}
-            alt="VIP"
-          />
+          <div style={imageDivStyle}>
+            <img style={imageStyle} src={vip} alt="VIP" />
+          </div>
           <p
             style={{
               maxWidth: '400px',
@@ -114,17 +114,9 @@ export const ProjectsSectionContent: React.FC<ProjectsSectionContentProps> = (
         >
           <h3>Triage Cause Predictor Proof-of-Concept</h3>
           <i>June 2023 – January 2024</i>
-          <img
-            style={{
-              objectFit: 'contain',
-              width: 'auto',
-              height: '250px',
-              marginTop: '15px',
-              marginBottom: '15px',
-            }}
-            src={tarigma}
-            alt="Tarigma"
-          />
+          <div style={imageDivStyle}>
+            <img style={imageStyle} src={tarigma} alt="Tarigma" />
+          </div>
           <p
             style={{
               maxWidth: '400px',
@@ -143,17 +135,9 @@ export const ProjectsSectionContent: React.FC<ProjectsSectionContentProps> = (
         >
           <h3>wordle-asm</h3>
           <i>March – May 2024</i>
-          <img
-            style={{
-              objectFit: 'contain',
-              width: 'auto',
-              height: '250px',
-              marginTop: '15px',
-              marginBottom: '15px',
-            }}
-            src={wordle}
-            alt="Wordle"
-          />
+          <div style={imageDivStyle}>
+            <img style={imageStyle} src={wordle} alt="Wordle" />
+          </div>
           <p
             style={{
               maxWidth: '400px',

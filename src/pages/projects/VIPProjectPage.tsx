@@ -29,9 +29,11 @@ const VIPProjectPage: React.FC = () => {
       </Element>
       <iframe
         src={slideURL + '/preview?'}
-        style={{ marginBottom: '2rem' }}
-        width="640"
-        height="398"
+        style={{
+          marginBottom: '2rem',
+          width: 'min(640px, 90%)',
+          height: 'min(398px, 75vw)',
+        }}
         allowFullScreen
       ></iframe>
       <p

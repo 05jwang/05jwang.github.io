@@ -86,7 +86,7 @@ const NavBar: React.FC = () => {
                     minimal
                     onClick={() => handleNavigateAndScroll('Projects')}
                   >
-                    Projects
+                    Portfolio
                   </Button>
                   <Button
                     minimal
