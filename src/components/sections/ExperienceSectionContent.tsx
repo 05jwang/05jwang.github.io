@@ -10,6 +10,7 @@ import tarigma_black from '../../assets/tarigma_black.png';
 import amazon_white from '../../assets/amazon_white.png';
 import amazon_black from '../../assets/amazon_black.png';
 import georgiaTech from '../../assets/georgiaTech.svg';
+import utd from '../../assets/utd.png';
 import SectionWrapper from './SectionWrapper';
 
 interface ExperienceSectionContentProps {
@@ -38,7 +39,7 @@ export const ExperienceSectionContent: React.FC<
               : '0 0 20px rgba(0, 0, 0, 0.1)',
             transition: 'background 0.3s ease',
           }}
-          date="Expected Start: May 2025"
+          date="May 2025 – Aug. 2025"
           contentArrowStyle={{ borderRight: '7px solid  #75aadb' }}
           iconStyle={{ background: '#75aadb' }}
           icon={
@@ -50,7 +51,7 @@ export const ExperienceSectionContent: React.FC<
                 height: '110%',
               }}
             >
-              <Icon icon="briefcase" />
+              <Icon style={{ marginTop: '5px' }} icon="briefcase" />
             </div>
           }
         >
@@ -86,7 +87,7 @@ export const ExperienceSectionContent: React.FC<
               : '0 0 20px rgba(0, 0, 0, 0.1)',
             transition: 'background 0.3s ease',
           }}
-          date="May 2023 – Aug 2024"
+          date="Jun. 2025 – Present"
           contentArrowStyle={{ borderRight: '7px solid  #75aadb' }}
           iconStyle={{ background: '#75aadb' }}
           icon={
@@ -98,7 +99,109 @@ export const ExperienceSectionContent: React.FC<
                 height: '110%',
               }}
             >
-              <Icon icon="briefcase" />
+              <Icon style={{ marginTop: '5px' }} icon="search-template" />
+            </div>
+          }
+        >
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              cursor: 'pointer',
+            }}
+            onClick={() => window.open('https://www.fung-group.org/')}
+          >
+            <img
+              src={georgiaTech}
+              alt="Georgia Tech"
+              style={{
+                width: '50px',
+                marginRight: '10px',
+              }}
+            />
+            <div>
+              <h3>Undergraduate Researcher</h3>
+              <h4>Fung Lab at Georgia Tech CSE</h4>
+              <i>Atlanta, GA</i>
+            </div>
+          </div>
+          <p>
+            Integrated a diffusion model into a crystal structure prediction
+            active learning framework using Python and PyTorch
+          </p>
+        </VerticalTimelineElement>
+        <VerticalTimelineElement
+          contentStyle={{
+            background: props.theme ? '#383e47' : '#ffffff',
+            boxShadow: props.theme
+              ? '0 0 20px rgba(0, 0, 0, 0.2)'
+              : '0 0 20px rgba(0, 0, 0, 0.1)',
+            transition: 'background 0.3s ease',
+          }}
+          date="Sep. 2023 – Dec. 2023"
+          contentArrowStyle={{ borderRight: '7px solid  #75aadb' }}
+          iconStyle={{ background: '#75aadb' }}
+          icon={
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                height: '110%',
+              }}
+            >
+              <Icon style={{ marginTop: '5px' }} icon="search-template" />
+            </div>
+          }
+        >
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              cursor: 'pointer',
+            }}
+            onClick={() => window.open('https://cs.utdallas.edu/')}
+          >
+            <img
+              src={utd}
+              alt="UT Dallas"
+              style={{
+                width: '50px',
+                marginRight: '10px',
+              }}
+            />
+            <div>
+              <h3>Undergraduate Researcher</h3>
+              <h4>Human Language Technology Research Institute</h4>
+              <i>Richardson, TX</i>
+            </div>
+          </div>
+          <p>
+            Benchmarked various large language models and parameters at
+            detecting internet memes intent using Python and PyTorch
+          </p>
+        </VerticalTimelineElement>
+        <VerticalTimelineElement
+          contentStyle={{
+            background: props.theme ? '#383e47' : '#ffffff',
+            boxShadow: props.theme
+              ? '0 0 20px rgba(0, 0, 0, 0.2)'
+              : '0 0 20px rgba(0, 0, 0, 0.1)',
+            transition: 'background 0.3s ease',
+          }}
+          date="May 2023 – Aug. 2024"
+          contentArrowStyle={{ borderRight: '7px solid  #75aadb' }}
+          iconStyle={{ background: '#75aadb' }}
+          icon={
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                height: '110%',
+              }}
+            >
+              <Icon style={{ marginTop: '5px' }} icon="briefcase" />
             </div>
           }
         >
@@ -138,7 +241,7 @@ export const ExperienceSectionContent: React.FC<
               : '0 0 20px rgba(0, 0, 0, 0.1)',
             transition: 'background 0.3s ease',
           }}
-          date="April 2021 – May 2023"
+          date="Apr. 2021 – May 2023"
           contentArrowStyle={{ borderRight: '7px solid  #75aadb' }}
           iconStyle={{ background: '#75aadb' }}
           icon={
@@ -150,7 +253,7 @@ export const ExperienceSectionContent: React.FC<
                 height: '110%',
               }}
             >
-              <Icon icon="briefcase" />
+              <Icon style={{ marginTop: '5px' }} icon="briefcase" />
             </div>
           }
         >
@@ -202,7 +305,7 @@ export const ExperienceSectionContent: React.FC<
                 height: '110%',
               }}
             >
-              <Icon icon="learning" />
+              <Icon style={{ marginTop: '5px' }} icon="learning" />
             </div>
           }
         >
@@ -228,7 +331,7 @@ export const ExperienceSectionContent: React.FC<
             </div>
           </div>
           <p>
-            <b>GPA: 3.82/4.0</b>
+            <b>GPA: 3.92/4.0</b>
             <hr style={{ marginTop: '10px', marginBottom: '10px' }} />
             <b>Coursework: </b>
             Data Structures & Algorithms, Linear Algebra, Intro to Databases,

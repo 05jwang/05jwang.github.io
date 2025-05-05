@@ -25,7 +25,7 @@ export const ContactSectionContent: React.FC<ContactSectionContentProps> = (
     <section id="Contact" style={SectionWrapper}>
       <h2>Contact</h2>
       <Text>
-        <Icon icon="envelope" /> Email:{' '}
+        <Icon style={{ marginBottom: '1px' }} icon="envelope" /> Email:{' '}
         <a href="mailto:05jwang@gmail.com">
           {props.isMobile ? <>Personal</> : <>05jwang@gmail.com</>}
         </a>
@@ -39,7 +39,7 @@ export const ContactSectionContent: React.FC<ContactSectionContentProps> = (
         <img
           src={props.theme ? linkedin_white : linkedin_black}
           alt="linkedin"
-          style={{ width: '16px', height: '16px' }}
+          style={{ width: '14px', height: '14px' }}
         />{' '}
         LinkedIn:{' '}
         <a href="https://www.linkedin.com/in/jwangcs/">
@@ -50,7 +50,7 @@ export const ContactSectionContent: React.FC<ContactSectionContentProps> = (
         <img
           src={props.theme ? github_white : github_black}
           alt="github"
-          style={{ width: '16px', height: '16px' }}
+          style={{ width: '14px', height: '14px' }}
         />{' '}
         GitHub: <a href="https://www.github.com/05jwang">github.com/05jwang</a>
       </Text>
