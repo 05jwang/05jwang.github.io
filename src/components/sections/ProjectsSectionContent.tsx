@@ -1,6 +1,5 @@
-import React, { useRef } from 'react';
-import { Text, Icon, Card } from '@blueprintjs/core';
-import { useRecoilState } from 'recoil';
+import React from 'react';
+import { Card } from '@blueprintjs/core';
 import SectionWrapper from './SectionWrapper';
 import tev_homepage from '../../assets/TEV_Homepage.png';
 import wordle from '../../assets/wordle.png';
@@ -20,13 +19,13 @@ export const ProjectsSectionContent: React.FC<ProjectsSectionContentProps> = (
     margin: '20px',
     display: 'flex',
     height: props.isMobile ? '450px' : '400px',
-    flexDirection: 'column' as 'column',
+    flexDirection: 'column' as const,
     alignItems: 'center',
   };
   const imageStyle = {
     width: '100%',
     height: 'auto',
-    objectFit: 'contain' as 'contain',
+    objectFit: 'contain' as const,
   };
   const imageDivStyle = {
     marginTop: '10px',
@@ -34,10 +33,6 @@ export const ProjectsSectionContent: React.FC<ProjectsSectionContentProps> = (
     display: 'flex',
     width: '90%',
     height: '70%',
-  };
-  const textStyle = {
-    maxWidth: '400px',
-    textAlign: 'center' as 'center',
   };
   return (
     <section id="Projects" style={SectionWrapper}>

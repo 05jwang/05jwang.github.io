@@ -1,6 +1,5 @@
 // src/pages/HomePage.tsx
-import React, { useEffect, useState } from 'react';
-import { Text, Icon, Card } from '@blueprintjs/core';
+import React, { useEffect } from 'react';
 import { useRecoilState } from 'recoil';
 import { themeState } from '../recoil/atoms/themeState';
 import { mobileState } from '../recoil/atoms/mobileState';
@@ -31,7 +30,7 @@ const HomePage: React.FC = () => {
     handleResize();
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  }, []);
+  }, [setIsMobile]);
 
   const [darkTheme] = useRecoilState(themeState);
   return (

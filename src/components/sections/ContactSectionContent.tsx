@@ -1,13 +1,5 @@
-import React, { useRef, useState } from 'react';
-import {
-  Text,
-  Icon,
-  Card,
-  Tabs,
-  Tab,
-  InputGroup,
-  NonIdealState,
-} from '@blueprintjs/core';
+import React from 'react';
+import { Text, Icon } from '@blueprintjs/core';
 import SectionWrapper from './SectionWrapper';
 import linkedin_black from '../../assets/linkedin_black.svg';
 import linkedin_white from '../../assets/linkedin_white.svg';

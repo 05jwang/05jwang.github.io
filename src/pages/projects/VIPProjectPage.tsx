@@ -2,8 +2,6 @@ import React, { useEffect } from 'react';
 import { Element, scroller } from 'react-scroll';
 import { useLocation } from 'react-router-dom';
 
-import vip from '../../assets/vip.jpg';
-
 const slideURL =
   'https://docs.google.com/presentation/d/1mqUBlAXYTzNzxMMXmdWIWAFFxWNEe6-dmbgqgqSju6I';
 

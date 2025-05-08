@@ -1,13 +1,10 @@
 import React from 'react';
-import { useRecoilState } from 'recoil';
-import { themeState } from '../recoil/atoms/themeState';
 import { Button } from '@blueprintjs/core';
 
 const resumeURL =
   'https://docs.google.com/document/d/1fskp9Q9r7JBY4NZrD2S8-8edlODksNu6dAeRDz6JrA4';
 
 const ResumePage: React.FC = () => {
-  const [darkTheme] = useRecoilState(themeState);
   return (
     <div
       style={{

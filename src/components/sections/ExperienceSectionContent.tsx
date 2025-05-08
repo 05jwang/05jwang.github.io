@@ -1,6 +1,5 @@
-import React, { useRef } from 'react';
-import { Text, Icon, Card } from '@blueprintjs/core';
-import { useRecoilState } from 'recoil';
+import React from 'react';
+import { Icon } from '@blueprintjs/core';
 import {
   VerticalTimeline,
   VerticalTimelineElement,

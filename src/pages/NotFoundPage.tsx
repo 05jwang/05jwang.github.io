@@ -1,10 +1,7 @@
 import React from 'react';
-import { useRecoilState } from 'recoil';
-import { themeState } from '../recoil/atoms/themeState';
-import { Button, Icon } from '@blueprintjs/core';
+import { Button } from '@blueprintjs/core';
 
 const NotFoundPage: React.FC = () => {
-  const [darkTheme] = useRecoilState(themeState);
   return (
     <div
       style={{

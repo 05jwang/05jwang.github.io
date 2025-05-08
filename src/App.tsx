@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route, HashRouter } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { useRecoilState } from 'recoil';
 import { themeState } from './recoil/atoms/themeState';
 import NavBar from './components/NavBar';
@@ -24,7 +24,7 @@ const App: React.FC = () => {
     minHeight: '100vh',
     transition: 'background-color 0.3s ease',
     display: 'flex',
-    flexDirection: 'column' as 'column',
+    flexDirection: 'column' as const,
   };
 
   return (

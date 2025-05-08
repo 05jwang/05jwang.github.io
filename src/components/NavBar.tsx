@@ -1,12 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import {
-  Navbar,
-  Alignment,
-  Button,
-  Popover,
-  PopoverPosition,
-} from '@blueprintjs/core';
-import { Link, scroller } from 'react-scroll';
+import React from 'react';
+import { Navbar, Alignment, Button, Popover } from '@blueprintjs/core';
+import { scroller } from 'react-scroll';
 import { useRecoilState } from 'recoil';
 import { themeState } from '../recoil/atoms/themeState';
 import { mobileState } from '../recoil/atoms/mobileState';

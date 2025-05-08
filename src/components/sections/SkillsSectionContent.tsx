@@ -1,13 +1,5 @@
 import React, { useState } from 'react';
-import {
-  Text,
-  Icon,
-  Card,
-  Tabs,
-  Tab,
-  InputGroup,
-  NonIdealState,
-} from '@blueprintjs/core';
+import { Text, Card, Tabs, Tab, InputGroup } from '@blueprintjs/core';
 import { NoSkillsInfo } from '../empty/NoSkillsInfo';
 import SectionWrapper from './SectionWrapper';
 
@@ -377,7 +369,6 @@ export const SkillsSectionContent: React.FC<SkillsSectionContentProps> = (
           justifyContent: 'center',
           alignItems: 'center',
           width: 'min(1000px, 90%)',
-          border: '2px solid red',
         }}
       >
         {renderSkills()}

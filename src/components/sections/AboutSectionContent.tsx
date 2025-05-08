@@ -1,5 +1,5 @@
-import React, { useRef, useState } from 'react';
-import { Text, Icon, Card, Tabs, Tab, Button } from '@blueprintjs/core';
+import React from 'react';
+import { Button } from '@blueprintjs/core';
 import { Link } from 'react-scroll';
 import SectionWrapper from './SectionWrapper';
 import headshot from '../../assets/headshot.jpg';
