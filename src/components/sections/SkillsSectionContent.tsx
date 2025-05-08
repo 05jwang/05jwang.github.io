@@ -212,7 +212,7 @@ const tools = [
   },
   {
     name: 'Perforce',
-    icon: '',
+    icon: 'https://media.licdn.com/dms/image/v2/D560BAQF7U3d-3nscNQ/company-logo_200_200/B56ZVCxogpGQAI-/0/1740582062549/perforce_logo?e=2147483647&v=beta&t=-KqwxMTKfa24DQJBVNEBKpq2r-veuS3m5en-DHB7a-M',
     link: 'https://www.perforce.com/',
   },
   {
@@ -376,7 +376,8 @@ export const SkillsSectionContent: React.FC<SkillsSectionContentProps> = (
           flexWrap: 'wrap',
           justifyContent: 'center',
           alignItems: 'center',
-          maxWidth: '1000px',
+          width: 'min(1000px, 90%)',
+          border: '2px solid red',
         }}
       >
         {renderSkills()}
