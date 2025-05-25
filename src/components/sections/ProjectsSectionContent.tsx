@@ -48,23 +48,6 @@ export const ProjectsSectionContent: React.FC<ProjectsSectionContentProps> = (
           interactive={true}
           elevation={2}
           style={cardStyle}
-          onClick={() => (window.location.href = '#/projects/tev')}
-        >
-          <h3>Tarigma-Event-Viewer Video Demo</h3>
-          <i>December 2023 – August 2024</i>
-          <div style={imageDivStyle}>
-            <img
-              style={imageStyle}
-              src={tev_homepage}
-              alt="Tarigma Event Viewer"
-            />
-          </div>
-          <p>A dashboard for viewing and analyzing Electrical Faults</p>
-        </Card>
-        <Card
-          interactive={true}
-          elevation={2}
-          style={cardStyle}
           onClick={() => (window.location.href = '#/projects/memeintent')}
         >
           <h3>MemeIntent Paper</h3>
@@ -99,27 +82,6 @@ export const ProjectsSectionContent: React.FC<ProjectsSectionContentProps> = (
             }}
           >
             Creating models to assist in material science research
-          </p>
-        </Card>
-        <Card
-          interactive={true}
-          elevation={2}
-          style={cardStyle}
-          onClick={() => (window.location.href = '#/projects/triage')}
-        >
-          <h3>Triage Cause Predictor Proof-of-Concept</h3>
-          <i>June 2023 – January 2024</i>
-          <div style={imageDivStyle}>
-            <img style={imageStyle} src={tarigma} alt="Tarigma" />
-          </div>
-          <p
-            style={{
-              maxWidth: '400px',
-              textAlign: 'center',
-            }}
-          >
-            Responsible for ETL and data preprocessing for a fault prediction
-            model
           </p>
         </Card>
         <Card
